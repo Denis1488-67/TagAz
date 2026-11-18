@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой сайт</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      position: relative;
+      display: grid;
+      place-items: center;
+      background: #f5f5f5;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #222;
+      padding: 24px;
+    }
+
+    /* Контейнер для логотипа и шильдика — в левом верхнем углу */
+    .brand {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      display: flex;
+      align-items: center;   /* выравнивание по вертикали */
+      gap: 10px;             /* расстояние между логотипом и шильдиком */
+    }
+
+    .brand img {
+      height: 60px;          /* высота обоих значков — меняйте под себя */
+      width: auto;
+      display: block;
+    }
+
+    main {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      margin: 0 auto 28px;
+      background: #000;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+      margin: 0;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <!-- Логотип + шильдик в левом верхнем углу -->
+  <div class="brand">
+    <img src="logo.png" alt="Логотип">
+    <img src="badge.png" alt="Шильдик">
+  </div>
+
+  <main>
+    <video
+      src="video.mp4"
+      poster="poster.jpg"
+      controls
+      playsinline
+      preload="metadata"
+    >
+      Ваш браузер не поддерживает видео.
+    </video>
+
+    <h1>Если ты купил это авто,</h1>
+    <p>то ты выглядишь примерно так ...</p>
+  </main>
+</body>
+</html>
